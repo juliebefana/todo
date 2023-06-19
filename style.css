@@ -3,28 +3,49 @@
     padding: 0;
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
-  }
+}
   
-  .container {
+.container {
     width: 100%;
     min-height: 100vh;
     background: linear-gradient(135deg, #153677, #4e085f);
     padding: 10px;
-  }
+}
   
-  .todo-box {
+.todo-box {
     width: 100%;
     max-width: 600px;
     background: #fff;
     margin: 100px auto 20px;
     padding: 40px 30px 70px;
     border-radius: 10px;
-  }
+}
     
-  h1 {
+h1 {
     text-align: center;
-  }
+}
     
-  form {
+form {
     display: flex;
-  }
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border-radius: 40px;
+    border: none;
+    background: lightgray;
+}
+    
+button {
+    padding: 5px 10px;
+}
+    
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+    
+li {
+    margin: 10px;
+}
