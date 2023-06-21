@@ -76,4 +76,39 @@ button[type="submit"] {
     cursor: pointer;
     border-radius: 40px;
 }
+
+.title-desc-container span {
+    margin-right: 8px;
+  }
+  
+.title-desc-container span.title {
+    font-weight: 600;
+}
+  
+.created-date,
+.completed-date {
+    margin-right: 8px;
+    font-family: 'Rajdhani', sans-serif;
+}
+  
+.title-desc-container span:nth-child(2) {
+    font-style: italic;
+}
+  
+.delete-button {
+    padding: 5px 25px;
+    background-color: #ff5945;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: relative;
+    top: -12px;
+    right: -90px;
+}
+  
+.delete-button:hover {
+    background-color: #f31e0f;
+}
   

@@ -89,3 +89,50 @@ function deleteTodoItem(index) {
   renderTodoItems();
 }
 
+// Function to format a date as a string
+function formatDate(date) {
+    const options = {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit',
+      hour12: false
+    };
+    const formattedDate = new Date(date).toLocaleString(undefined, options);
+    return formattedDate;
+  }
+  
+
+  // Function to save todos to local storage
+  function saveTodosToLocalStorage() {
+    localStorage.setItem('todos', JSON.stringify(todos));
+  }
+  
+  // Function to retrieve todos from local storage
+  function retrieveTodosFromLocalStorage() {
+    const storedTodos = localStorage.getItem('todos');
+    if (storedTodos) {
+      todos = JSON.parse(storedTodos);
+      renderTodoItems();
+    }
+  }
+  
+  // Event listener for form submission
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const titleInput = document.getElementById('title-input');
+    const descriptionInput = document.getElementById('description-input');
+    const title = titleInput.value.trim();
+    const description = descriptionInput.value.trim();
+    if (title && description) {
+      createTodoItem(title, description);
+      titleInput.value = '';
+      descriptionInput.value = '';
+      renderTodoItems();
+    }
+  });
+  
+  // Retrieve todos from local storage on page load
+  retrieveTodosFromLocalStorage();
+  
