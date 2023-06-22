@@ -37,10 +37,12 @@ function renderTodoItems() {
 
     const title = document.createElement('span');
     title.textContent = todo.title;
+    title.classList.add('title'); 
     if (todo.completed) {
       title.classList.add('completed');
     }
     titleDescContainer.appendChild(title);
+
 
     const description = document.createElement('span');
     description.textContent = todo.description;

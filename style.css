@@ -82,7 +82,7 @@ button[type="submit"] {
   }
   
 .title-desc-container span.title {
-    font-weight: 600;
+    font-weight: bold;
 }
   
 .created-date,
